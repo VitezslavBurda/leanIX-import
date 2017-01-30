@@ -6,7 +6,7 @@
     <ProjectGuid>5c60a0ea-237b-4476-a6f3-9258be675802</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>leanIX_import.py</StartupFile>
-    <SearchPath>..\leanix-sdk-python-develop\src\;..\leanix-sdk-python-develop\src\leanix\</SearchPath>
+    <SearchPath>..\leanix-sdk-python-master\src\leanix\;..\leanix-sdk-python-master\src\</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>leanIX import</Name>
@@ -24,6 +24,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="leanIX_import.py" />
+    <Compile Include="leanIX_export.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_create_relationship.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="{2af0f10d-7135-4994-9156-5d01c9c11b7e}\2.7" />

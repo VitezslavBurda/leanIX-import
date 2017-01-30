@@ -2,7 +2,7 @@
 """
 The MIT License (MIT)
 
-Copyright (c) 2015 LeanIX GmbH
+Copyright (c) 2017 LeanIX GmbH
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -37,7 +37,8 @@ class ActivitiesApi(object):
     
 
     def getActivities(self, **kwargs):
-        """Get the latest activities
+        """
+        Get the latest activities
 
         Args:
             scope, str: If set to 'my', only the activities related to subscribed Fact Sheet are listed for the authenticated user. (optional)
@@ -90,7 +91,8 @@ class ActivitiesApi(object):
         if formParams:
             headerParams['Content-type'] = 'application/x-www-form-urlencoded'
 
-        postData = (formParams if formParams else bodyParam)
+        # postData = (formParams if formParams else bodyParam)
+        postData = params['body'] if 'body' in params else None
 
         response = self.apiClient.callAPI(resourcePath, method, queryParams,
                                           postData, headerParams)
